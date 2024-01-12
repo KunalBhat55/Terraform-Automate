@@ -30,7 +30,7 @@ jobs:
         run: terraform validate 
 
       - name: terraform-apply
-        run: terraform apply -auto-approve
+        run: TF_LOG=DEBUG terraform apply -auto-approve
 
 
      
