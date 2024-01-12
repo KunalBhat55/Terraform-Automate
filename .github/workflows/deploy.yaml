@@ -31,7 +31,7 @@ jobs:
 
       - name: terraform-apply
         env:
-          TF_INPUT: false
+          TF_INPUT: "false"
         run: terraform apply -auto-approve
 
 
