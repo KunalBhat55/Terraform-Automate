@@ -30,8 +30,6 @@ jobs:
         run: terraform validate 
 
       - name: terraform-apply
-        env:
-          TF_INPUT: "false"
         run: terraform apply -auto-approve
 
 
