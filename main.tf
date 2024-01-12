@@ -1,8 +1,6 @@
 module "VPC" {
   source       = "./modules/vpc"
-  subnet_cidr  = var.subnet_cidr // variable values passed here
   subnet_names = var.subnet_names
-  vpc_cidr     = var.vpc_cidr
 }
 module "security_group" {
   source = "./modules/sg"
