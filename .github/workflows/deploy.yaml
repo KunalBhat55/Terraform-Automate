@@ -1,0 +1,28 @@
+name: terraform-deploy-cicd
+run-name: ${{github.actor}}-terraform-deploy-cicd
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    name: terraform-deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2 
+      - name: terraform-init
+        run: terraform init 
+      - name: terraform-plan
+        run: terraform plan 
+      - name: terraform-apply
+        run: terraform apply -auto-approve
+  finish:
+    name: terraform-finish
+    runs-on: ubuntu-latest
+    needs: deploy
+    steps:
+      - name: terraform-finish
+        run: echo "Terraform Resources Created Successfully!"
+     
