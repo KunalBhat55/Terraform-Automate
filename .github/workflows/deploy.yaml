@@ -37,6 +37,9 @@ jobs:
 
       - name: terraform-apply
         run: TF_LOG=DEBUG terraform apply -auto-approve
+        
+      - name: terraform-destroy
+        run: TF_LOG=DEBUG terraform destroy -auto-approve
 
 
      
