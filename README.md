@@ -10,7 +10,7 @@ This project showcases an automated infrastructure provisioning and deployment w
 * **EC2 Instance:** An Amazon Linux 2 instance running a web server (Apache) to host your website.
 * **Security Groups:** Control inbound and outbound traffic for your resources.
 * **Application Load Balancer (ALB):** Distributes traffic across your EC2 instances for high availability.
-* **S3 Bucket:** Stores Terraform state and potentially your website assets.
+* **S3 Bucket:** Stores Terraform state files.
 
 
 ## Deployment Workflow
